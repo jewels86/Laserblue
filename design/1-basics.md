@@ -10,6 +10,27 @@ The system is designed to be scalable, allowing for easy expansion as the demand
 ### Node Degree $d$
 The node degree, represented as $d$, is the number of other satellites one satellite should be connected to at once. 
 The node degree scales with the number of nodes in the network.
+### Byzantine Tolerance $f$
+Byzantine tolerance, denoted as $f$, refers to the maximum number of faulty or malicious nodes that the network can tolerate while still functioning correctly. 
+The value of $f$ is determined based on the total number of nodes in the network and the specific consensus algorithm being used.
+### VRF Seed Entropy $H$
+The VRF seed entropy $H$ is a measure of the randomness and unpredictability of the seed used in the Verifiable Random Function (VRF). 
+High entropy ensures that the seed is difficult to guess or reproduce, which is crucial for maintaining the security and integrity of the VRF. 
+### Reputation Weights $\alpha$, $\beta$, $\gamma$, $\delta$
+Reputation weights, denoted as $\alpha$, $\beta$, $\gamma$, and $\delta$, are parameters used to quantify the importance of different aspects of a node's behavior in the network. These weights are used to calculate the overall reputation score of a node, which influences its trustworthiness and reliability within the network.
+
+- $\alpha$: This weight represents the importance of a node's uptime. A higher $\alpha$ value indicates that consistent availability is highly valued in the network.
+- $\beta$: This weight signifies the importance of accuracy in the data provided by the node. A higher $\beta$ value means that nodes providing accurate and reliable data are more trusted.
+- $\gamma$: This weight measures the importance of low latency in the node's performance. A higher $\gamma$ value indicates that nodes with faster response times are preferred.
+- $\delta$: This weight accounts for penalties assigned to nodes for misbehavior or malicious activities. A higher $\delta$ value means that nodes with a history of misbehavior are more heavily penalized in their reputation score.
+
+By adjusting these weights, the network can prioritize different aspects of node performance and behavior, ensuring that the most reliable and trustworthy nodes are given higher reputation scores.
+### Epoch Length $T_{epoch}$
+Epoch length, denoted as $T_{epoch}$, is the duration of a single epoch in the network. It defines the time interval during which specific operations or events are executed. The length of an epoch can vary depending on the network's requirements and the nature of the tasks being performed. 
+
+A well-defined epoch length is crucial for maintaining synchronization and coordination among the nodes in the network. It ensures that all nodes perform their operations within the same timeframe, which helps in achieving consensus and maintaining the overall integrity of the network.
+
+Factors influencing the choice of epoch length include the network's latency, the complexity of the operations, and the desired level of security. By carefully selecting an appropriate epoch length, the network can optimize its performance and ensure efficient and reliable operation.
 
 ## Key Concepts
 ### Epoches
