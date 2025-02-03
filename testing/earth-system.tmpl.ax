@@ -1,0 +1,56 @@
+{
+    "name": "earth-system",
+    "author": "jewels86",
+    "license": "MIT",
+    "description": "Template for Earth System.",
+    "limit": "30d",
+    "delta": "5min",
+    "t": 0,
+    "radius_multiplier": 2,
+    "bodies": [
+        {
+            "name": "Earth",
+            "mass": 5.972e+24,
+            "radius": 6371000.0,
+            "color": "green",
+            "r": [[0, 0, 0]],
+            "v": [[0, 0, 0]]
+        },
+        {
+            "name": "Moon",
+            "mass": 7.342e+22,
+            "radius": 1737000.0,
+            "color": "blue",
+            "r": [[384400000.0, 0, 0]],
+            "v": [[0, 1022.0, 0]]
+        },
+        {
+            "name": "Satellite1",
+            "mass": 1000,
+            "radius": 2,
+            "r": [[42164000.0, 0, 0]],
+            "v": [[0, 3070.0, 0]]
+        },
+        {
+            "name": "Satellite2",
+            "mass": 419725,
+            "radius": 109,
+            "r": [[41670000.0, 0, 0]],
+            "v": [[0, 2660.0, 0]]
+        },
+        {
+            "name": "Satellite3",
+            "mass": 500,
+            "radius": 1,
+            "r": [[35786000.0, 0, 0]],
+            "v": [[0, 3074.0, 0]]
+        },
+        {
+            "name": "Satellite4",
+            "mass": 1200,
+            "radius": 3,
+            "r": [[42164000.0, 0, 0]],
+            "v": [[0, 3070.0, 0]]
+        }
+    ]
+}
