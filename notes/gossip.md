@@ -1,5 +1,5 @@
 # Gossip Broadcasting Notes
-*Read [Cryptography & Security](cryptography.md) first.*
+*Read [Cryptography & Security](cryptography-and-security.md) first.*
 - Gossip-based message propagation mimics the way information spreads in social networks.
 - Nodes connect to a limited number of peers, with a maximum of the network node degree $d$.
 - When a message needs to be broadcasted, a node sends it to a random subset of its connected peers.
