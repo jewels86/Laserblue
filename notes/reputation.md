@@ -24,4 +24,5 @@
     $$
     \lambda(R_{prev}) = \lambda_{min} + (\lambda_{max} - \lambda_{min}) * e^{-kR_{prev}}
     $$
-    Where $\lambda(R_{prev})$ is the decay rate, which depends on past reputation and $k$ is a scaling factor for smooth transitions.
+    Where $\lambda(R_{prev})$ is the decay rate, which depends on past reputation $R_{prev}$ from time $t_{prev}$, $k$ is a scaling factor for smooth transitions (e.g 0.05), $\lambda_{min}$ is the minimum decay rate (e.g 0.001), and $\lambda_{max}$ is the maximum decay rate (e.g 0.1).
+
