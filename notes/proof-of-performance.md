@@ -2,7 +2,7 @@
 - In a **Proof of Performance** (**PoP**) system, nodes earn credibility by completing verifiable tasks that contribute to the network's operation.
 ## Tasks
 - In PoP systems, the network maintains a list of tasks that need to be completed. 
-These tasks can be pre-defined (e.g sending a hourly update to Earth) or dynamically added (e.g Earth requests pictures of the Moon).
+These tasks are created by nodes and are assigned via zero-knowledge calculations.
 - Tasks are weighted by priority and age.
 ## Validation & Accuracy
 - All task results are cryptographically signed to prove authenticity and prevent tampering.
@@ -11,4 +11,4 @@ These tasks can be pre-defined (e.g sending a hourly update to Earth) or dynamic
 ## Reputation
 - Nodes gain reputation based on performance, accuracy, and reliability.
 - Incorrect or delayed results can negatively affect a node's reputation.
-- A distributed ledger records reputations.
+- Every node holds a DAG representing the reputations of other nodes.
