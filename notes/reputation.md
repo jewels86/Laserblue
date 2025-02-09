@@ -17,8 +17,8 @@
 - The more references a node has, the more trusted it becomes.
 - High-reputation nodes carry more weight in validation.
 - Conflicts are resolved by selecting the branch with the most validation weight.
-- When any node evaluates another's reputation, it applies a decay function:
-    $$R(t) = R_{prev} \cdot e^{-\lambda(R_{prev})(t-t_{prev})}$$
-    $$\lambda(R_{prev}) = \lambda_{min} + (\lambda_{max} - \lambda_{min}) * e^{-kR_{prev}}$$
+- When any node evaluates another's reputation, it applies a decay function:  
+    $$R(t) = R_{prev} \cdot e^{-\lambda(R_{prev})(t-t_{prev})}$$  
+    $$\lambda(R_{prev}) = \lambda_{min} + (\lambda_{max} - \lambda_{min}) * e^{-kR_{prev}}$$  
     Where $\lambda(R_{prev})$ is the decay rate, which depends on past reputation $R_{prev}$ from time $t_{prev}$, $k$ is a scaling factor for smooth transitions (e.g 0.05), $\lambda_{min}$ is the minimum decay rate (e.g 0.001), and $\lambda_{max}$ is the maximum decay rate (e.g 0.1).
 

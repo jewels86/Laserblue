@@ -24,22 +24,22 @@
 
 ## Task Assignment
 - All nodes are assigned to groups based on their public key and the total number of groups.
-- The total number of groups $G$ depends on the number of nodes $N$:
-    $$G = \max(M, \lceil N / 10 \rceil)$$
+- The total number of groups $G$ depends on the number of nodes $N$:  
+    $$G = \max(M, \lceil N / 10 \rceil)$$  
     Where $M$ is the max number of groups in the network. This ensures there aren’t too many groups while scaling with network size.
-- Groups are assigned based on the number of groups and the public key of the node.
-    $$\text{groupID} = \text{hash}(\text{public\_key}) \bmod G$$
+- Groups are assigned based on the number of groups and the public key of the node.  
+    $$\text{groupID} = \text{hash}(\text{public\_key}) \bmod G$$  
     This method guarantees that every node computes its group assignment consistently.
-- Each group has a bias that is mathematically determined using its identifier and a global seed $S$:
-    $$\text{bias} = \text{hash}(\text{groupID} \,\|\, S) \bmod M$$
+- Each group has a bias that is mathematically determined using its identifier and a global seed $S$:  
+    $$\text{bias} = \text{hash}(\text{groupID} \,\|\, S) \bmod M$$  
     where $M$ is a normalization factor to scale the bias into a useful range.
 - Because $G$ and $S$ are globally known, all nodes can calculate the bias for every group.
 - When a task is broadcast, its weight is calculated using:
     - The task’s priority.
     - The time since the task’s creation.
     - The time until the task’s deadline.
-    - The group bias.
-    $$\text{weight} = \alpha \cdot \text{priority} + \beta \cdot f(\text{age}, \text{deadline}) + \gamma \cdot \text{bias}$$
+    - The group bias.  
+    $$\text{weight} = \alpha \cdot \text{priority} + \beta \cdot f(\text{age}, \text{deadline}) + \gamma \cdot \text{bias}$$  
     where $\alpha$, $\beta$, and $\gamma$ are tunable constants and $f(\text{age}, \text{deadline})$ is a function that quantifies temporal urgency.
 - Each node calculates the weights for all groups using the above formula.
 - If a node’s group weight is within the top $d$ (the node degree threshold) weights, that group is eligible to take on the task.
