@@ -12,8 +12,8 @@
     - **Uptime $U$**: How often the node is online and reachable.
     - **Flag count $F$**: Set as 1 by default, but switched to 0 if flags are raised (e.g node disconnects randomly, starts to spam, etc).
     
-    These metrics are packaged into a vector as
-    $S = [T_{res}, M, D, U, F]$
+    These metrics are packaged into a vector as\
+    $$S = [T_{res}, M, D, U, F]$$
 - The state at any time $n$ can be represented with
     $S_n = \alpha \cdot S_{n - 1} + (1 - \alpha) * S_{new}$
     Where $S_{new}$ represents the new state vector and $\alpha$ is a smoothing factor.
