@@ -15,15 +15,11 @@
     These metrics are packaged into a vector as  
     $$S = [T_{res}, M, D, U, F]$$
 - The state at any time $n$ can be represented with
-    $S_n = \alpha \cdot S_{n - 1} + (1 - \alpha) * S_{new}$
+    $$S_n = \alpha \cdot S_{n - 1} + (1 - \alpha) * S_{new}$$
     Where $S_{new}$ represents the new state vector and $\alpha$ is a smoothing factor.
 - Instead of storing behavior logs, we hash the state vector into a fingerprint:
-    $$
-    F_n = \text{SimHash}(S_n)
-    $$
+    $$F_n = \text{SimHash}(S_n)$$
 - SimHash enables compact storage and efficient similarity comparison, as it preserves approximate relationships between state vectors.
 - Instead of comparing to fingerprints directly ($F_n = F_m$), we compare their drift:  
-    $$
-    \text{Drift} = \frac{\text{HammingDistance}(F_n, F_m)}{t_m - t_n}
-    $$
+    $$\text{Drift} = \frac{\text{HammingDistance}(F_n, F_m)}{t_m - t_n}$$
     Where the hamming distance is the number of differing bits in the SimHash outputs, and where a small drift represents stable behavior and a large one represents erratic behavior.
